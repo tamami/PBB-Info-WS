@@ -1,0 +1,3 @@
+jangan lupa tambahkan script ini di services.xml
+
+<parameter name="ServiceTCCL">composite</parameter>
