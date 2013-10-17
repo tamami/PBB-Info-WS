@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:apachesoap="http://xml.apache.org/xml-soap" 
+	xmlns:impl="http://service.aikibo.lab" xmlns:intf="http://service.aikibo.lab" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.aikibo.lab">
+<!--
+WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)
+-->
+<wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://service.aikibo.lab">
+<element name="getProsentaseRealisasiSPPTByNow">
+<complexType/>
+</element>
+<element name="getProsentaseRealisasiSPPTByNowResponse">
+<complexType>
+<sequence>
+<element name="getProsentaseRealisasiSPPTByNowReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getProsentaseRealisasiSPPTByTahun">
+<complexType>
+<sequence>
+<element name="year" type="xsd:int"/>
+</sequence>
+</complexType>
+</element>
+<element name="getProsentaseRealisasiSPPTByTahunResponse">
+<complexType>
+<sequence>
+<element name="getProsentaseRealisasiSPPTByTahunReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getNilaiSPPTByNow">
+<complexType/>
+</element>
+<element name="getNilaiSPPTByNowResponse">
+<complexType>
+<sequence>
+<element name="getNilaiSPPTByNowReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getNilaiSPPTByTahun">
+<complexType>
+<sequence>
+<element name="year" type="xsd:int"/>
+</sequence>
+</complexType>
+</element>
+<element name="getNilaiSPPTByTahunResponse">
+<complexType>
+<sequence>
+<element name="getNilaiSPPTByTahunReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSKPByNow">
+<complexType/>
+</element>
+<element name="getRealisasiSKPByNowResponse">
+<complexType>
+<sequence>
+<element name="getRealisasiSKPByNowReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSPPT">
+<complexType/>
+</element>
+<element name="getRealisasiSPPTResponse">
+<complexType>
+<sequence>
+<element name="getRealisasiSPPTReturn" type="xsd:long"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSKPByDate">
+<complexType>
+<sequence>
+<element name="tanggal" type="xsd:int"/>
+<element name="bulan" type="xsd:int"/>
+<element name="tahun" type="xsd:int"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSKPByDateResponse">
+<complexType>
+<sequence>
+<element name="getRealisasiSKPByDateReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getKetetapanSPPTByTahun">
+<complexType>
+<sequence>
+<element name="year" type="xsd:int"/>
+</sequence>
+</complexType>
+</element>
+<element name="getKetetapanSPPTByTahunResponse">
+<complexType>
+<sequence>
+<element name="getKetetapanSPPTByTahunReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getKetetapanSPPTByNow">
+<complexType/>
+</element>
+<element name="getKetetapanSPPTByNowResponse">
+<complexType>
+<sequence>
+<element name="getKetetapanSPPTByNowReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSPPTByDate">
+<complexType>
+<sequence>
+<element name="tanggal" type="xsd:int"/>
+<element name="bulan" type="xsd:int"/>
+<element name="tahun" type="xsd:int"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSPPTByDateResponse">
+<complexType>
+<sequence>
+<element name="getRealisasiSPPTByDateReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSPPTTahunan">
+<complexType>
+<sequence>
+<element name="tahun" type="xsd:int"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSPPTTahunanResponse">
+<complexType>
+<sequence>
+<element name="getRealisasiSPPTTahunanReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+<element name="getRealisasiSPPTByNow">
+<complexType/>
+</element>
+<element name="getRealisasiSPPTByNowResponse">
+<complexType>
+<sequence>
+<element name="getRealisasiSPPTByNowReturn" type="xsd:string"/>
+</sequence>
+</complexType>
+</element>
+</schema>
+</wsdl:types>
+<wsdl:message name="getNilaiSPPTByNowRequest">
+<wsdl:part element="impl:getNilaiSPPTByNow" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSPPTByNowResponse">
+<wsdl:part element="impl:getRealisasiSPPTByNowResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSPPTByDateRequest">
+<wsdl:part element="impl:getRealisasiSPPTByDate" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getKetetapanSPPTByTahunResponse">
+<wsdl:part element="impl:getKetetapanSPPTByTahunResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getKetetapanSPPTByTahunRequest">
+<wsdl:part element="impl:getKetetapanSPPTByTahun" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getProsentaseRealisasiSPPTByTahunResponse">
+<wsdl:part element="impl:getProsentaseRealisasiSPPTByTahunResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getNilaiSPPTByTahunRequest">
+<wsdl:part element="impl:getNilaiSPPTByTahun" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSPPTTahunanResponse">
+<wsdl:part element="impl:getRealisasiSPPTTahunanResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getProsentaseRealisasiSPPTByNowResponse">
+<wsdl:part element="impl:getProsentaseRealisasiSPPTByNowResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getNilaiSPPTByNowResponse">
+<wsdl:part element="impl:getNilaiSPPTByNowResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getNilaiSPPTByTahunResponse">
+<wsdl:part element="impl:getNilaiSPPTByTahunResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getProsentaseRealisasiSPPTByTahunRequest">
+<wsdl:part element="impl:getProsentaseRealisasiSPPTByTahun" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSKPByNowResponse">
+<wsdl:part element="impl:getRealisasiSKPByNowResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSKPByDateResponse">
+<wsdl:part element="impl:getRealisasiSKPByDateResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSKPByDateRequest">
+<wsdl:part element="impl:getRealisasiSKPByDate" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSPPTByNowRequest">
+<wsdl:part element="impl:getRealisasiSPPTByNow" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSKPByNowRequest">
+<wsdl:part element="impl:getRealisasiSKPByNow" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getKetetapanSPPTByNowResponse">
+<wsdl:part element="impl:getKetetapanSPPTByNowResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSPPTResponse">
+<wsdl:part element="impl:getRealisasiSPPTResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSPPTByDateResponse">
+<wsdl:part element="impl:getRealisasiSPPTByDateResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getKetetapanSPPTByNowRequest">
+<wsdl:part element="impl:getKetetapanSPPTByNow" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSPPTRequest">
+<wsdl:part element="impl:getRealisasiSPPT" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRealisasiSPPTTahunanRequest">
+<wsdl:part element="impl:getRealisasiSPPTTahunan" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getProsentaseRealisasiSPPTByNowRequest">
+<wsdl:part element="impl:getProsentaseRealisasiSPPTByNow" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:portType name="PBBService">
+<wsdl:operation name="getProsentaseRealisasiSPPTByNow">
+<wsdl:input message="impl:getProsentaseRealisasiSPPTByNowRequest" name="getProsentaseRealisasiSPPTByNowRequest"></wsdl:input>
+<wsdl:output message="impl:getProsentaseRealisasiSPPTByNowResponse" name="getProsentaseRealisasiSPPTByNowResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getProsentaseRealisasiSPPTByTahun">
+<wsdl:input message="impl:getProsentaseRealisasiSPPTByTahunRequest" name="getProsentaseRealisasiSPPTByTahunRequest"></wsdl:input>
+<wsdl:output message="impl:getProsentaseRealisasiSPPTByTahunResponse" name="getProsentaseRealisasiSPPTByTahunResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getNilaiSPPTByNow">
+<wsdl:input message="impl:getNilaiSPPTByNowRequest" name="getNilaiSPPTByNowRequest"></wsdl:input>
+<wsdl:output message="impl:getNilaiSPPTByNowResponse" name="getNilaiSPPTByNowResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getNilaiSPPTByTahun">
+<wsdl:input message="impl:getNilaiSPPTByTahunRequest" name="getNilaiSPPTByTahunRequest"></wsdl:input>
+<wsdl:output message="impl:getNilaiSPPTByTahunResponse" name="getNilaiSPPTByTahunResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSKPByNow">
+<wsdl:input message="impl:getRealisasiSKPByNowRequest" name="getRealisasiSKPByNowRequest"></wsdl:input>
+<wsdl:output message="impl:getRealisasiSKPByNowResponse" name="getRealisasiSKPByNowResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSPPT">
+<wsdl:input message="impl:getRealisasiSPPTRequest" name="getRealisasiSPPTRequest"></wsdl:input>
+<wsdl:output message="impl:getRealisasiSPPTResponse" name="getRealisasiSPPTResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSKPByDate">
+<wsdl:input message="impl:getRealisasiSKPByDateRequest" name="getRealisasiSKPByDateRequest"></wsdl:input>
+<wsdl:output message="impl:getRealisasiSKPByDateResponse" name="getRealisasiSKPByDateResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getKetetapanSPPTByTahun">
+<wsdl:input message="impl:getKetetapanSPPTByTahunRequest" name="getKetetapanSPPTByTahunRequest"></wsdl:input>
+<wsdl:output message="impl:getKetetapanSPPTByTahunResponse" name="getKetetapanSPPTByTahunResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getKetetapanSPPTByNow">
+<wsdl:input message="impl:getKetetapanSPPTByNowRequest" name="getKetetapanSPPTByNowRequest"></wsdl:input>
+<wsdl:output message="impl:getKetetapanSPPTByNowResponse" name="getKetetapanSPPTByNowResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSPPTByDate">
+<wsdl:input message="impl:getRealisasiSPPTByDateRequest" name="getRealisasiSPPTByDateRequest"></wsdl:input>
+<wsdl:output message="impl:getRealisasiSPPTByDateResponse" name="getRealisasiSPPTByDateResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSPPTTahunan">
+<wsdl:input message="impl:getRealisasiSPPTTahunanRequest" name="getRealisasiSPPTTahunanRequest"></wsdl:input>
+<wsdl:output message="impl:getRealisasiSPPTTahunanResponse" name="getRealisasiSPPTTahunanResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSPPTByNow">
+<wsdl:input message="impl:getRealisasiSPPTByNowRequest" name="getRealisasiSPPTByNowRequest"></wsdl:input>
+<wsdl:output message="impl:getRealisasiSPPTByNowResponse" name="getRealisasiSPPTByNowResponse"></wsdl:output>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="PBBServiceSoapBinding" type="impl:PBBService">
+<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="getProsentaseRealisasiSPPTByNow">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getProsentaseRealisasiSPPTByNowRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getProsentaseRealisasiSPPTByNowResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getProsentaseRealisasiSPPTByTahun">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getProsentaseRealisasiSPPTByTahunRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getProsentaseRealisasiSPPTByTahunResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getNilaiSPPTByNow">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getNilaiSPPTByNowRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getNilaiSPPTByNowResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getNilaiSPPTByTahun">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getNilaiSPPTByTahunRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getNilaiSPPTByTahunResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSKPByNow">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getRealisasiSKPByNowRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getRealisasiSKPByNowResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSPPT">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getRealisasiSPPTRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getRealisasiSPPTResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSKPByDate">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getRealisasiSKPByDateRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getRealisasiSKPByDateResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getKetetapanSPPTByTahun">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getKetetapanSPPTByTahunRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getKetetapanSPPTByTahunResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getKetetapanSPPTByNow">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getKetetapanSPPTByNowRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getKetetapanSPPTByNowResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSPPTByDate">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getRealisasiSPPTByDateRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getRealisasiSPPTByDateResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSPPTTahunan">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getRealisasiSPPTTahunanRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getRealisasiSPPTTahunanResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRealisasiSPPTByNow">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getRealisasiSPPTByNowRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getRealisasiSPPTByNowResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="PBBServiceService">
+<wsdl:port binding="impl:PBBServiceSoapBinding" name="PBBService">
+<wsdlsoap:address location="http://118.96.129.161/axis2/services/PBBService"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
