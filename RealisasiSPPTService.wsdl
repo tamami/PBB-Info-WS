@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://aikibo.lab/RealisasiSPPTService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RealisasiSPPTService" targetNamespace="http://aikibo.lab/RealisasiSPPTService/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://aikibo.lab/RealisasiSPPTService/">
+      <xsd:element name="getRealisasiSPPTResponse" type="xsd:long">
+
+      </xsd:element>
+      <xsd:element name="tanggal" type="xsd:int">
+
+      </xsd:element>
+      <xsd:element name="out" type="xsd:string"></xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getRealisasiSPPTRequest">
+  </wsdl:message>
+  <wsdl:message name="getRealisasiSPPTResponse">
+    <wsdl:part element="tns:getRealisasiSPPTResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getRealisasiSPPTByDateRequest">
+  	<wsdl:part name="parameters" element="tns:tanggal"></wsdl:part>
+  	<wsdl:part name="NewPart1" type="xsd:int"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRealisasiSPPTByDateResponse">
+  	<wsdl:part name="getRealisasiSPPTByDateResponse" element="tns:out"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RealisasiSPPTService">
+    <wsdl:operation name="getRealisasiSPPT">
+      <wsdl:input message="tns:getRealisasiSPPTRequest"/>
+      <wsdl:output message="tns:getRealisasiSPPTResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getRealisasiSPPTByDate">
+    	<wsdl:input message="tns:getRealisasiSPPTByDateRequest"></wsdl:input>
+    	<wsdl:output message="tns:getRealisasiSPPTByDateResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RealisasiSPPTServiceSOAP" type="tns:RealisasiSPPTService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getRealisasiSPPT">
+      <soap:operation soapAction="http://aikibo.lab/RealisasiSPPTService/getRealisasiSPPT"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RealisasiSPPTService">
+    <wsdl:port binding="tns:RealisasiSPPTServiceSOAP" name="RealisasiSPPTServiceSOAP">
+      <soap:address location="http://118.96.129.161/axis2/services"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
