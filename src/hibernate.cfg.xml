@@ -6,9 +6,9 @@
 	<session-factory>
 		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
 		<property name="connection.url">jdbc:oracle:thin:pbbdummy/PBBDUMMY@[IP SERVER DB]:1521/SISMIOPDMY</property>
-		<property name="connection.username">pbbdummy</property>
+		<property name="connection.username">[user_sismiop]</property>
 		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
-		<property name="connection.password">PBBDUMMY</property>
+		<property name="connection.password">[pass_sismiop]</property>
 		<property name="show_sql">true</property>
 		
 		<!--  <mapping class="lab.aikibo.entity.PembayaranSPPT" /> -->
