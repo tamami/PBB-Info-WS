@@ -5,7 +5,7 @@
 
 	<session-factory>
 		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="connection.url">jdbc:oracle:thin:pbbdummy/PBBDUMMY@118.96.129.161:1521/SISMIOPDMY</property>
+		<property name="connection.url">jdbc:oracle:thin:pbbdummy/PBBDUMMY@[IP SERVER DB]:1521/SISMIOPDMY</property>
 		<property name="connection.username">pbbdummy</property>
 		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
 		<property name="connection.password">PBBDUMMY</property>
